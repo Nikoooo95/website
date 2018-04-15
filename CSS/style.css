@@ -1,0 +1,574 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/* General para todo el body */
+body {
+    background-color: rgb(46, 46, 46);
+    font-family: "Verdana", serif;
+    margin: 0;
+    color: aliceblue;
+}
+
+/* General para todos los enlaces del body */
+body a{
+    color: aliceblue;
+}
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+/* Fin de generalizacion */
+
+
+
+
+
+
+
+
+/* - Menu -*/
+
+/*Generalizacion del header */
+header{
+    width: 100%;
+    background-color: rgb(36, 34, 35);
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 100;
+}
+
+#btn-menu{
+    display: none;
+}
+
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    float: right;
+}
+
+header label img{
+    
+    width: 30px;
+    height: 30px;
+    
+}
+header label:hover{
+    cursor:  pointer;
+
+}
+
+.mainMenu{
+    -webkit-transition: all 0.7s ease;
+transition: all 0.7s ease;
+    
+}
+
+.mainMenu ul{
+    float: right;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.mainMenu li:hover{
+    color: green;
+   -webkit-transform: translate(0px, -2px);
+        -ms-transform: translate(0px, -2px);
+        transform: translate(0px, -2px);
+}
+
+.mainMenu li a:hover{
+    color: rgb(260,170,20);
+}
+
+
+.mainMenu li a{
+    display: block;
+    padding: 17px 24px; /* Tamaño de las cledas del menu */
+    color: rgb(244,188,15);
+    text-decoration: none;
+}
+
+.textMain{
+    padding-top: 70px;
+}
+
+
+@media(max-width:768px){
+    header label{
+        display: block;
+        
+    }
+    .mainMenu{
+        position: absolute;
+        background-color: rgb(46, 46, 46);
+        width: 100%;
+        margin-left: 100%;
+        margin-top: 60px;
+        transition: all 0.5s;
+    }
+    
+    .mainMenu ul{
+        flex-direction: column;
+        float: none;
+    }
+    
+    #btn-menu:checked ~ .mainMenu{
+        margin: 0;
+        margin-top:60px;
+        text-align: center;
+    }
+}
+/* - Fin de menu */
+
+
+
+
+
+
+
+
+/* Iconos generales */
+.iconos{
+    height: 50px;
+    width: 125px;
+    margin-left: 20px;
+    float:left;
+}
+
+/* Logo grande */
+.bigLogo{
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 200px;
+}
+
+/* Texto de mi nombre inicial */
+.nameText{
+    padding-top: 20px;
+    color: rgb(244,188,15);
+    text-align: center;
+    text-shadow: 0px 2px 4px #000000;
+}
+
+/* Descripción de quién soy */
+.subnameText{
+    text-align: center;
+    text-shadow: 0px 2px 4px #000000;
+}
+
+/* Imagen inicial grande */
+.imagenInicio{   
+    width: 70%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* Slideshow */
+.slider{
+    background-color: rgb(36, 34, 35); 
+    padding-top: 50px;
+    padding-bottom: 30px;
+    top: 30px;
+    text-align: center;
+    
+}
+
+
+/* Puntos inferiores del slider */
+.dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    background-color: #717171;
+    margin-bottom: 30PX;
+}
+
+.active {
+    background-color: rgb(244,188,15);
+    
+}
+
+/* Fade animación */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Cambiar el tamaño de las imagenes iniciales */
+.sliderImage{
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* Fin del slider */
+
+
+
+
+
+
+
+/* Footer */
+footer{
+    width: 100%;
+    background-color: rgb(36, 34, 35);
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+    z-index: 100;
+    text-align: right;
+    margin-top: 12%;
+    bottom: 0;
+    position: fixed;
+}
+
+footer img{
+    width: 30px;
+    height: auto;
+    float: left;
+    margin-left: 30px;
+}
+
+.sign{
+    margin-top: 10px;
+    margin-right: 30px;*/
+}
+/* Fin del footer */
+
+
+
+
+
+/* Imagen del fondo */
+.backImage{
+    position: fixed;
+    z-index: -1;
+    height: 400px;
+    width: auto;
+    opacity: .2;
+}
+
+
+
+
+
+
+
+/* Descripción de sobre mi */
+.avatar{
+    text-align: justify;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 14px;
+    justify-content: center;
+}
+
+.avatar p{
+    text-align: justify;
+}
+.avatar img{
+    width: 150px;
+    height: auto;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius:75px;
+}
+/* Fin de sobre mi */
+
+
+
+
+
+/* Fondos */
+.greyBG{
+    padding-top: 20px;
+    background-color: rgb(46, 46, 46);
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.darkBG{
+    padding-top: 20px;
+    background-color: rgb(36, 34, 35);
+    text-align: center;
+    padding-bottom: 30px;
+}
+/* Fin de fondos */
+
+
+/* Textos */
+.titulos{
+    text-align: center;
+    color: rgb(244,188,15);
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.titulos a{
+    text-align: center;
+    color: rgb(244,188,15);
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+
+
+.specialWords{
+    color: rgb(244,188,15);
+}
+
+/* Fin de textos */
+
+
+
+
+
+
+
+/* Formulario de contacto */
+
+.form-div {
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:25px;
+	padding-bottom:25px;
+	width: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+}
+
+.feedback-input {
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid rgb(244,188,15);
+    color: rgb(46, 46, 46);
+	outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+.focused{
+    color: rgb(46, 46, 46);
+	border: rgb(46, 46, 46);
+}
+
+/* Icons ---------------------------------- */
+#name{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+#name:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+    background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+#email:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+    background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#comment{
+	background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+
+}
+#button-blue{
+	width: 100%;
+	border: #F4BC0F solid 3px;
+	cursor:pointer;
+	background-color: #242223;
+	color: rgb(244,188,15);
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+#button-blue:hover{
+	color: #FFAA14;
+}
+	
+.submit:hover {
+	color: #FFAA14
+}
+/* Fin formulario */
+
+
+
+
+.floating-box {
+    width: 100%;
+    height: auto;
+  margin: 0 auto;
+    margin-top: 30px;
+    align-content: center;
+    text-align: center;
+  padding: 25px 0;
+}
+/* -------------------------------------
+ * Bar container
+ * ------------------------------------- */
+.progress-radial {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(244,188,15);
+}
+
+/* -------------------------------------
+ * Optional centered circle w/text
+ * ------------------------------------- */
+.progress-radial .overlay {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #2E2E2E; /* Color del centro */
+  border-radius: 50%;
+  margin-left: 15px;
+  margin-top: 15px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 14px;
+}
+
+
+/* -------------------------------------
+ * Mixin for progress-% class
+ * ------------------------------------- */
+.progress-100 {
+  background-image: linear-gradient(90deg, #F4BC0F 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #F4BC0F 50%, #2f3439 50%, #2f3439);
+}
+
+
+/*Imagenes redondas de proyecto*/
+.snip1566 {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+    max-width: 250px;
+  width: 25%;
+  color: #bbb;
+  font-size: 16px;
+  box-shadow: none !important;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.snip1566 *,
+.snip1566:before,
+.snip1566:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+/*Movimiento lineas laterales*/
+.snip1566:before,
+.snip1566:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+  border: 2px solid #bbb;
+  border-color: transparent #F4BC0F;
+}
+
+.snip1566 img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.snip1566:hover:before,
+.snip1566.hover:before,
+.snip1566:hover:after,
+.snip1566.hover:after {
+  border-width: 10px;
+}
+
+.gamesText{
+    margin-left: 10%;
+    margin-right: 10%;
+}

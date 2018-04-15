@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       
+       <!-- Titulo de la web -->
+        <title>Nicolas Tapia Sanz - Portfolio</title>
+        
+        <!-- Rel es la relación para relacionar con el codigo CSS -->
+        <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+        
+        <!-- Metas para SEO -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="keywords" content="nicolas tapia sanz, videogames, videojuegos, games, programmer, programador, design, diseño" />
+        <meta name="description" content="Web de Nicolas Tapia Sanz" />
+        <meta name="copyright" content="Nicolás Tapia Sanz" />
+        <meta name="generator" content="Nicolas usign Brackets" />
+    </head>
+    
+    <body>
+       
+       <!-- Menu de la web -->
+        <header>
+            <a href="index.html"><img class="iconos" src="images/Logos/logo_complete.png" alt="Logo_Complete" ></a>
+           <input type="checkbox" id="btn-menu">
+           <label for="btn-menu"><img src="images/Icons/menu_icon.png" alt="Menu_Icon"></label>
+            <nav class="mainMenu">
+                <ul>
+                  <li><a href="HTML/proyectos.html" 
+                  onclick="uncheck()">PROJECTS</a></li>
+                  <li><a href="#SobreMi" onclick="uncheck()">PROFESSIONAL EXPERIENCE</a></li>
+                  <li><a href="#Contacto" onclick="uncheck()">CONTACT</a></li>
+                   <li><a href="" onclick="alertFunction()">BLOG</a></li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </nav>
+         </header> 
+         
+         <script>
+             function uncheck(){
+                 document.getElementById("btn-menu").checked=false;
+             }
+        </script>
+        <script>
+             function alertFunction(){
+                 alert("Todavía No Disponible. Vuelva mas tarde.");
+             }
+        </script>
+        <!-- Fin del menu -->
+          
+        <img class="backImage" src="images/Background/background_image.png" >
+            
+        <!-- Presentación de mi nombre -->
+        <img class="bigLogo" src="images/Logos/logo_complete_noBack.png">
+        <div class="nameText"> NICOLÁS TAPIA SANZ <br> </div>
+        <article id="Proyectos"></article>
+        <div class="subnameText"> VIDEOGAMES PROGRAMMER AND DESIGNER </div>
+        
+        <br><br>
+        <!-- Fin de mi nombre -->
+
+        <!-- Conjunto de imagenes de presentación -->
+        <div class="darkBG">
+            <div class="slider">
+              <a href="HTML/proyectos.html"><img class="sliderImage" src="images/Games/just_dream.png" alt="Just Dream"></a>
+            </div>
+
+            <div class="slider">
+              <a href="HTML/proyectos.html"><img class="sliderImage" src="images/Games/gravity_cube.png" alt="Gravity Cube"></a>
+            </div>
+
+            <div class="slider">
+              <a href="HTML/proyectos.html"><img class="sliderImage" src="images/Games/knight_ninja.png" alt="Knight Ninja"></a>
+            </div>
+             <div class="slider">
+              <a href="HTML/proyectos.html"><img class="sliderImage" src="images/Games/emergency_room.png" alt="Emergency Room"></a>
+            </div>
+                <article id="SobreMi"></article>
+            <br>
+        
+        <!-- Conjunto de puntos inferiores -->
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span>
+            <span class="dot"></span>
+          
+        </div>
+        
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("slider");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex> slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 4000); // Tiempo de cambio de la web (4 segundos)
+            }
+        </script>
+        <!-- Fin de imagenes de presentación -->
+        
+        <!-- Inicio de Sobre Mi -->
+        
+        <section class="greyBG" id="main">
+            <article class="titulos">PROFESSIONAL EXPERIENCE</article>
+            <div class="avatar">
+                <img src="images/Avatar/avatar.png" alt="Avatar">
+                 
+                Third year student of <span class="specialWords">Videogames Design And Development Degree</span> at <a href="http://www.esne.es"><span class="specialWords">ESNE</span></a>, Madrid (Spain). Passionate of video games, music and all audiovisual staff. I have knowledges about programming, design and videogames production.<br><br><span class="specialWords">Programming</span><br>Unity, Unreal, C #, C ++, C, Java, Javascript, SQL, Android, HTML, CSS ...<br><br><span class="specialWords">Design</span><br>Script, Levels, Narrative, Characters ...<br><br><span class="specialWords">Production</span><br>Scrum, hacknPlan, Cascading Methodology, Public Relations, Marketing ...<br><br>I have some knowledge of modeling, mapped and textured in <span class="specialWords">3DMax</span>, as well as <span class="specialWords">Office package</span> (Word, Powerpoint and Excel) and <span class="specialWords">Adobe package</span> (Photoshop, Illustrator and Premiere). <br><br>I have <span class="specialWords">experience</span> of three years in several college projects of videogames, both in the role of Producer and in that of Programmer and Designer. I have also done testing tasks for mobile applications and professional games. <br><br>I get involved in projects to the <span class="specialWords">fullest</span> and I always try to take them as far as possible.
+                
+            
+            </div>
+            <!-- Porcentajes -->
+            <div class="floating-box">
+                <div class="progress-radial progress-100">
+                  <div class="overlay">Unity</div>
+                </div>
+                <div class="progress-radial progress-100">
+                  <div class="overlay">C#</div>
+                </div>
+                <div class="progress-radial progress-100">
+                  <div class="overlay">Unreal</div>
+                </div>
+                <div class="progress-radial progress-100">
+                  <div class="overlay">C++</div>
+                </div>
+                <div class="progress-radial progress-100">
+                  <div class="overlay">Production</div>
+                </div>
+                <div class="progress-radial progress-100">
+                  <div class="overlay">Design</div>
+                </div>
+                <div class="progress-radial progress-100">
+                  <div class="overlay">3D Model</div>
+                </div>
+                <div class="progress-radial progress-100">
+                  <div class="overlay">SCRUM</div>
+                </div>
+                <div class="progress-radial progress-100">
+                  <div class="overlay">Web</div>
+                </div>
+            </div>
+            <!-- Fin porcentajes -->
+            
+            
+            
+        </section>
+        <!-- Fin de Sobre mi -->
+        
+        <!-- Inicio de Contacto -->
+        <div class="darkBG">
+         <article class="titulos" id="Contacto">CONTACT</article>
+        
+
+          <div class="form-div">
+            <form class="form" method="post" action="sendbyemail.php" id="form1">
+              <p class="name">
+                <input name="first_name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+              </p>
+
+              <p class="email">
+                <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+              </p>
+
+              <p class="text">
+                <textarea name="comments" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Message"></textarea>
+              </p>
+
+
+              <div class="submit">
+                <input type="submit" value="Send" id="button-blue"/>
+                <div class="ease"></div>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+        
+        
+        <!-- Fin de Contacto -->
+        
+        
+        <!-- Pie de página -->
+        <footer>
+            <a href="https://www.twitter.com/nicolstapia" target="_blank"><img src="images/Icons/twitter_icon.png" alt="Twitter"></a>
+               <a href="https://es.linkedin.com/in/nicolastapiasanz" target="_blank">
+                <img src="images/Icons/linkedin_icon.png" alt="LinkedIn">
+            </a>
+                <div class="sign">
+                © 2018 Nicolás Tapia Sanz.</div>
+        </footer>
+        <!-- Fin de pie de página -->
+    </body>
+</html>
